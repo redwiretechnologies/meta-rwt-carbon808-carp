@@ -1,0 +1,19 @@
+pa-temp-sensor@18 {
+	compatible = "jedec,jc-42.4-temp";
+	reg = <0x18>;
+};
+
+/* Looking at the driver, this doesn't support the latch registers.
+
+   The latest driver (in kernel v5.2.3) does support latch, but we
+   would need to add the following ID:
+   { "pcal6408", 8 | PCA953X_TYPE | PCA_LATCH_INT, },
+*/
+pca9534@25 {
+  compatible = "nxp,pca9534";
+  reg = <0x25>;
+  gpio-controller;
+  #gpio-cells = <2>;
+  interrupt-parent = <&gpio>;
+  interrupts = <99 8>; /* IRQ_TYPE_EDGE_FALLING */
+};

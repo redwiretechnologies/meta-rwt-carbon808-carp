@@ -1,0 +1,30 @@
+
+/* Looking at the driver, this doesn't support the latch registers.
+
+   The latest driver (in kernel v5.2.3) does support latch, but we
+   would need to add the following ID:
+   { "pcal6408", 8 | PCA953X_TYPE | PCA_LATCH_INT, },
+*/
+pca9534_carp0: pca9534_carp0@21 {
+  compatible = "nxp,pcal6408";
+  reg = <0x21>;
+  gpio-controller;
+  #gpio-cells = <2>;
+  interrupt-parent = <&gpio>;
+  interrupts = <34 8>; /* IRQ_TYPE_EDGE_FALLING */
+  gpio-line-names = "RFP_0_ADGPO_3", "RFP_1_ADGPO_3", "RFP_2_ADGPO_3", "RFP_3_ADGPO_3", "RFCAL_EN", "RFCAL_RXSEL", "RFCAL_TXSEL", "NVMe_PWR_EN";
+};
+pca9534_carp1: pca9534_carp1@22 {
+  compatible = "nxp,pcal6524";
+  reg = <0x22>;
+  gpio-controller;
+  #gpio-cells = <2>;
+  interrupt-parent = <&gpio>;
+  interrupt-controller;
+  #interrupt-cells = <2>;
+  interrupts = <36 8>; /* IRQ_TYPE_EDGE_FALLING */
+  gpio-line-names = "RFP_0_GPIO_0", "RFP_0_GPIO_1", "RFP_0_GPIO_2", "RFP_0_GPIO_3", "RFP_0_GPIO_4", "RFP_0_GPIO_5", 
+                    "RFP_1_GPIO_0", "RFP_1_GPIO_1", "RFP_1_GPIO_2", "RFP_1_GPIO_3", "RFP_1_GPIO_4", "RFP_1_GPIO_5",
+                    "RFP_2_GPIO_0", "RFP_2_GPIO_1", "RFP_2_GPIO_2", "RFP_2_GPIO_3", "RFP_2_GPIO_4", "RFP_2_GPIO_5",
+                    "RFP_3_GPIO_0", "RFP_3_GPIO_1", "RFP_3_GPIO_2", "RFP_3_GPIO_3", "RFP_3_GPIO_4", "RFP_3_GPIO_5";
+};

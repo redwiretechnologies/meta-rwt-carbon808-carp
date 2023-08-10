@@ -1,0 +1,25 @@
+/dts-v1/;
+/plugin/;
+
+
+/ {
+    fragment@0 {
+        target = <&i2c0>;
+        __overlay__ {
+            
+
+
+           pca9534_1@20 {
+            compatible = "nxp,pcal6408";
+            reg = <0x20>;
+            gpio-controller;
+            #gpio-cells = <2>;
+            interrupt-parent = <&gpio>;
+            interrupts = <34 8>; /* IRQ_TYPE_EDGE_FALLING */
+            gpio-line-names = "B_RX1_HPF_SEL2", "B_RX1_HPF_SEL3", "B_RX2_LPF_SEL1", "B_RX2_LPF_SEL2", "B_RX2_LPF_SEL3", "B_RX2_HPF_SEL1", "B_RX2_HPF_SEL2", "B_RX2_HPF_SEL3";
+};
+        };
+    };
+
+    
+};
