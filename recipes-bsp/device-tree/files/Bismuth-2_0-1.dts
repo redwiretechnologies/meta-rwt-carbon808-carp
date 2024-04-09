@@ -12,13 +12,13 @@
             };
 
 
-            pca9534_1@25 {
+            pca9534_1@20 {
                 compatible = "nxp,pca9534";
-                reg = <0x25>;
+                reg = <0x20>;
                 gpio-controller;
                 #gpio-cells = <2>;
-                interrupt-parent = <&gpio>;
-                interrupts = <99 8>; /* IRQ_TYPE_LEVEL_LOW IRQ_TYPE_EDGE_FALLING */
+                interrupt-parent = <&pca9534_carp1>;
+                interrupts = <6 2>; /* IRQ_TYPE_LEVEL_LOW IRQ_TYPE_EDGE_FALLING */
             };
         };
     };

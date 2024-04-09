@@ -15,7 +15,7 @@
             gpio-controller;
             #gpio-cells = <2>;
             interrupt-parent = <&pca9534_carp1>;
-            interrupts = <12 2>; /* IRQ_TYPE_EDGE_FALLING */
+            interrupts = <18 2>; /* IRQ_TYPE_EDGE_FALLING */
             gpio-line-names = "B_RX1_HPF_SEL2", "B_RX1_HPF_SEL3", "B_RX2_LPF_SEL1", "B_RX2_LPF_SEL2", "B_RX2_LPF_SEL3", "B_RX2_HPF_SEL1", "B_RX2_HPF_SEL2", "B_RX2_HPF_SEL3";
 };
         };
