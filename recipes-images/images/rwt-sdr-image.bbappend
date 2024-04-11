@@ -3,6 +3,10 @@ DISTRO_FEATURES += "wifi bluetooth"
 CORE_IMAGE_EXTRA_INSTALL += "\
     nvme-cli \
     bitfiles-default-carp \
+    bitfiles-default-chan-carp \
+    bitfiles-dual-carp \
+    bitfiles-dual-chan-carp \
+    bitfiles-gr-iio-carp \
     misc-gether-files \
     usbc-helper \
     rngd-reboot \

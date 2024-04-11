@@ -1,4 +1,4 @@
-adc0_ad9361: ad9361-phy@0 {
+adc1_ad9361: ad9361-phy-B@1 {
     #address-cells = <2>;
     #size-cells = <2>;
     compatible = "adi,ad9361";
@@ -231,18 +231,18 @@ adc0_ad9361: ad9361-phy@0 {
 
 
     /*---------------- RWT Carbon additions ------------------- */
-    //en_agc-gpios = <&gpio 134 0>;
-    //sync-gpios = <&gpio 129 0>;
-    //reset-gpios = <&gpio 143 0>;
-    //enable-gpios = <&gpio 135 0>;
-    //txnrx-gpios = <&gpio 136 0>;
-    en_agc-gpios = <&gpio 131 0>;
+    en_agc-gpios = <&gpio 134 0>;
     sync-gpios = <&gpio 129 0>;
-    reset-gpios = <&gpio 130 0>;
-    enable-gpios = <&gpio 132 0>;
-    txnrx-gpios = <&gpio 133 0>;
+    reset-gpios = <&gpio 143 0>;
+    enable-gpios = <&gpio 135 0>;
+    txnrx-gpios = <&gpio 136 0>;
+    //en_agc-gpios = <&gpio 131 0>;
+    //sync-gpios = <&gpio 129 0>;
+    //reset-gpios = <&gpio 130 0>;
+    //enable-gpios = <&gpio 132 0>;
+    //txnrx-gpios = <&gpio 133 0>;
     /* Polarity is reversed on some tx/rx pins. */
-    adi,lvds-invert1-control = <0xe3>;
-    adi,lvds-invert2-control = <0xcF>;
+    adi,lvds-invert1-control = <0xff>;
+    adi,lvds-invert2-control = <0x0F>;
 
 };
