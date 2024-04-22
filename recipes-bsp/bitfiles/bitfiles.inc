@@ -23,6 +23,8 @@ SRC_URI:append := " \
         file://bootgen.bif \
         file://carbon-transceiver-i2c.dtsi \
         file://carbon-transceiver-spi.dtsi \
+        file://carbon-transceiver-dualA-spi.dtsi \
+        file://carbon-transceiver-dualB-spi.dtsi \
         file://carbon-carp-i2c.dtsi \
         "
 YAML_OVERLAY_CUSTOM_DTS = "pl-final.dts"

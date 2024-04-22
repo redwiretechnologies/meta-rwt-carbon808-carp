@@ -13,7 +13,7 @@
 
 
             pca9534_4@5E {
-                ccompatible = "nxp,pcal6408";
+                compatible = "nxp,pcal6408";
                 reg = <0x5E>;
                 gpio-controller;
                 #gpio-cells = <2>;

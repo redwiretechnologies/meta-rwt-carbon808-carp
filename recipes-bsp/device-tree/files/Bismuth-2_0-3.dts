@@ -6,19 +6,19 @@
     fragment@0 {
         target = <&i2c0>;
         __overlay__ {
-            pa-temp-sensor_0@18 {
+            pa-temp-sensor_2@76 {
                 compatible = "jedec,jc-42.4-temp";
-                reg = <0x18>;
+                reg = <0x76>;
             };
 
 
-            pca9534_0@20 {
+            pca9534_3@4E {
                 compatible = "nxp,pca9534";
-                reg = <0x20>;
+                reg = <0x4E>;
                 gpio-controller;
                 #gpio-cells = <2>;
                 interrupt-parent = <&pca9534_carp1>;
-                interrupts = <0 2>; /* IRQ_TYPE_LEVEL_LOW IRQ_TYPE_EDGE_FALLING */
+                interrupts = <12 2>; /* IRQ_TYPE_LEVEL_LOW IRQ_TYPE_EDGE_FALLING */
             };
         };
     };

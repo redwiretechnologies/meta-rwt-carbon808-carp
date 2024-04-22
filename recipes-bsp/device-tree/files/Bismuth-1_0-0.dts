@@ -12,9 +12,9 @@
             };
 
 
-            pca9534_0@20 {
+            pca9534_0@25 {
                 compatible = "nxp,pca9534";
-                reg = <0x20>;
+                reg = <0x25>;
                 gpio-controller;
                 #gpio-cells = <2>;
                 interrupt-parent = <&pca9534_carp1>;
