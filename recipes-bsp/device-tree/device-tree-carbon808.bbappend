@@ -11,6 +11,9 @@ SRC_URI += " \
         file://usb-peripheral.dts \
         file://Bismuth-2_0-0.dts \
         file://Bismuth-2_0-1.dts \
+        file://Bismuth-2_0-2.dts \
+        file://Bismuth-2_0-3.dts \
+        file://Bismuth-2_0-4.dts \
         file://Selenium-1_0-0.dts \
         file://Selenium-1_0-1.dts \
         file://Selenium-1_0-2.dts \

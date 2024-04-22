@@ -13,7 +13,7 @@
 
 
             pca9534_1@20 {
-               compatible = "nxp,pcal6408";
+                compatible = "nxp,pcal6408";
                 reg = <0x20>;
                 gpio-controller;
                 #gpio-cells = <2>;
