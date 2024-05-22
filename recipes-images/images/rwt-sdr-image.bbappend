@@ -7,6 +7,7 @@ CORE_IMAGE_EXTRA_INSTALL += "\
     bitfiles-dual-carp \
     bitfiles-dual-chan-carp \
     bitfiles-gr-iio-carp \
+    bitfiles-fmcomms5-carp \
     misc-gether-files \
     usbc-helper \
     rngd-reboot \
