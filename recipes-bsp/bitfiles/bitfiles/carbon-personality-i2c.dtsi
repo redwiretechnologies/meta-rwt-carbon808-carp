@@ -1,8 +1,3 @@
-pa-temp-sensor@18 {
-	compatible = "jedec,jc-42.4-temp";
-	reg = <0x18>;
-};
-
 /* Looking at the driver, this doesn't support the latch registers.
 
    The latest driver (in kernel v5.2.3) does support latch, but we
