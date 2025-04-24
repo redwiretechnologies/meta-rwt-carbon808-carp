@@ -6,11 +6,6 @@
     fragment@0 {
         target = <&i2c0>;
         __overlay__ {
-            pa-temp-sensor_3@76 {
-                compatible = "jedec,jc-42.4-temp";
-                reg = <0x76>;
-            };
-
 
             pca9534_3@4E {
                 compatible = "nxp,pcal6408";
